@@ -1,173 +1,89 @@
-/* Basisthema */
-:root {
-    --background: #0e0e10;
-    --surface: #1a1a1d;
-    --primary: #1f3b87;    /* Donkerblauw */
-    --accent: #5e2a8a;     /* Donkerpaars */
-    --text: #e0e0e0;
-    --link: #9fa8da;
-    --hover: #b388ff;
-    --border: #2c2c31;
-    --shadow: rgba(0, 0, 0, 0.6);
-}
-
 body {
-    background-color: var(--background);
-    color: var(--text);
-    font-family: 'Segoe UI', Roboto, sans-serif;
+    background-color: #333;
+    color: white;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
 }
-
-/* Algemene layout */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
+/*navigatiebalk*/
+nav {
+    background-color: #000000;
+    padding: 20px 10px;
 }
-
-/* Koptekst en navigatie */
-header {
-    background: var(--primary);
-    color: white;
-    padding: 20px 40px;
-    box-shadow: 0 2px 10px var(--shadow);
-    text-align: center;
-}
-
-.nav-container {
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+}
+nav ul li {
+    margin-right: 20px;
+}
+/*Tekstkleur in navigatiebalk*/
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 20px 10px;
+}
+nav ul li a:hover {
+    background-color: #3a13d6;
+    border-radius: 5px;
+}
+
+.projecten-sectie {
+    padding: 60px 20px;
     max-width: 1200px;
     margin: auto;
-    padding: 10px 20px;
 }
 
-.logo {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: white;
+.projecten-sectie h2 {
+    text-align: center;
+    color: var(--hover);
+    margin-bottom: 40px;
+    font-size: 2rem;
 }
 
-.nav-links {
-    display: flex;
+.projecten-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: var(--hover);
-}
-
-.hamburger {
-    display: none;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-}
-
-/* Mobiele weergave */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: #1f1f26;
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px var(--shadow);
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .hamburger {
-        display: block;
-    }
-}
-
-
-
-
-/* Secties */
-section {
-    background-color: var(--surface);
+.project-card {
+    background-color: #1e1e2f;
+    border: 1px solid #333;
     border-radius: 12px;
-    padding: 30px;
-    margin: 20px 0;
-    box-shadow: 0 4px 12px var(--shadow);
-}
-
-/* Titels */
-h1, h2, h3 {
-    color: var(--hover);
-    margin-bottom: 20px;
-}
-
-/* Kaarten / projecten */
-.card {
-    background-color: #1c1c21;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px var(--shadow);
-}
-
-/* Knoppen */
-.button {
-    background-color: var(--accent);
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s;
-    cursor: pointer;
-}
-
-.button:hover {
-    background-color: #7e3dbf;
-}
-
-/* Footer */
-footer {
-    background: var(--primary);
-    color: white;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    border-top: 1px solid var(--border);
+    overflow: hidden;
 }
 
-/* Links */
-a {
-    color: var(--link);
-    text-decoration: none;
+.project-card:hover {
+    transform: translateY(-5px);
 }
 
-a:hover {
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
     color: var(--hover);
+    margin-bottom: 10px;
 }
 
-/* Smooth scrolling */
-html {
-    scroll-behavior: smooth;
+.project-card p {
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+    .projecten-grid {
+        grid-template-columns: 1fr; /* 1 kolom op mobiel */
+    }
 }
