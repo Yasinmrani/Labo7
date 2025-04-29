@@ -1,63 +1,121 @@
-/* Algemene achtergrond en tekstkleur */
+/* Basisthema */
+:root {
+    --background: #0e0e10;
+    --surface: #1a1a1d;
+    --primary: #1f3b87;    /* Donkerblauw */
+    --accent: #5e2a8a;     /* Donkerpaars */
+    --text: #e0e0e0;
+    --link: #9fa8da;
+    --hover: #b388ff;
+    --border: #2c2c31;
+    --shadow: rgba(0, 0, 0, 0.6);
+}
+
 body {
-    background-color: #121212; /* Donkergrijs/zwart */
-    color: #e0e0e0; /* Lichtgrijze tekst voor leesbaarheid */
-    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'Segoe UI', Roboto, sans-serif;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
-/* Donkerblauwe accenten */
-.header,
-.navbar,
-.button-primary {
-    background-color: #1a237e; /* Donkerblauw */
-    color: #ffffff;
+/* Algemene layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
-/* Donkerpaarse accenten */
-.footer,
-.button-secondary,
-.card-highlight {
-    background-color: #4a148c; /* Donkerpaars */
-    color: #ffffff;
+/* Koptekst en navigatie */
+header {
+    background: var(--primary);
+    color: white;
+    padding: 20px 40px;
+    box-shadow: 0 2px 10px var(--shadow);
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--hover);
+}
+
+/* Secties */
+section {
+    background-color: var(--surface);
+    border-radius: 12px;
+    padding: 30px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+/* Titels */
+h1, h2, h3 {
+    color: var(--hover);
+    margin-bottom: 20px;
+}
+
+/* Kaarten / projecten */
+.card {
+    background-color: #1c1c21;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px var(--shadow);
+}
+
+/* Knoppen */
+.button {
+    background-color: var(--accent);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #7e3dbf;
+}
+
+/* Footer */
+footer {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid var(--border);
 }
 
 /* Links */
 a {
-    color: #7986cb; /* Lichtblauw-paarsige tint voor goede leesbaarheid op donkere achtergrond */
+    color: var(--link);
     text-decoration: none;
 }
 
 a:hover {
-    color: #b39ddb; /* Lichtere paarse tint bij hover */
+    color: var(--hover);
 }
 
-/* Knoppen stijl */
-.button-primary,
-.button-secondary {
-    border: none;
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 5px;
-    cursor: pointer;
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
 }
-
-.button-primary:hover {
-    background-color: #283593;
-}
-
-.button-secondary:hover {
-    background-color: #6a1b9a;
-}
-
-/* Contentkaarten of containers */
-.card {
-    background-color: #1e1e2f; /* Zeer donkergrijze achtergrond */
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-
