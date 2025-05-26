@@ -87,3 +87,7 @@ nav ul li a:hover {
         grid-template-columns: 1fr; /* 1 kolom op mobiel */
     }
 }
+
+.tekst {
+    font-size: 34px;
+}
