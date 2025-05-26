@@ -4,6 +4,17 @@
   <meta charset="UTF-8">
   <title>Portfolio Yasin Mrani</title>
   <link rel="stylesheet" href="./css/style.css">
+
+  <!-- LEAFLET -->
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  
+  <link rel="stylesheet" href="css/map.css">
+  
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
 </head>
 <body>
 
@@ -21,16 +32,29 @@
 
   <!-- Hoofdinhoud -->
   <main>
-    <section aria-labelledby="motorsturing-title" style="margin: 3rem;">
-      <header>
-        <h2 id="contact-title" class="display-3 text-center">Contact</h2>
-      </header>
-      <article class="project-card">
-        <p class="text-start">
-          Hier komt alles over contact
-        </p>
-      </article>
-    </section>
+    <article class="project-card">
+      <section class="projecten-sectie">
+        <h1>Neem contact met mij op</h1>
+        <form action="mailto:yasin.mrani2020@hotmail.com" method="post" enctype="text/plain" class="form-contact">
+          
+          <label for="naam">Naam:</label>
+          <input type="text" id="naam" name="naam" class="textarea-contact">
+          
+          <label for="email">E-mailadres:</label>
+          <input type="email" id="email" name="email" class="textarea-contact">
+          
+          <label for="bericht">Bericht:</label>
+          <textarea id="bericht" name="bericht" rows="5" class="textarea-contact"></textarea>
+          
+          <button type="submit" class="button-contact">
+            Verstuur
+          </button>
+        </form>
+        <section id="map" class="row">
+          <div id="HomeMap" class="col-12 mb-3"></div>
+        </section>
+      </section>
+    </article>
   </main>
 
 </body>

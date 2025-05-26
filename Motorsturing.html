@@ -21,15 +21,49 @@
 
   <!-- Titel en inhoud -->
   <main>
-    <section aria-labelledby="motorsturing-title" style="margin: 3rem;">
-      <header>
-        <h2 id="motorsturing-title" class="display-3 text-center">Motorsturing</h2>
-      </header>
-      <article>
-        <p class="text-start">
-          Voor het vak embedded systemen zijn we bezig met programmeren van en maken van een zelfrijdende auto die zelf moet kunnen rijden op een zwarte lijn en als er iets op de weg komt moet het stoppen.
-          We moeten hier dus gaan werken met sensoren. Deze opdracht is verdeeld in verschillende delen. Die ga ik op deze pagina toelichten.
-        </p>
+    <section class="projecten-sectie">
+      
+      <article class="project-card">
+        <h2>Zelfrijdende Auto met Arduino Nano</h2>
+        <header class="tekst-motorsturing">
+          In dit project bouwen we een klein wagentje dat zelfstandig een zwarte lijn op de grond volgt. Dit gebeurt met behulp van twee motoren, sensoren, een LCD-scherm en een Arduino Nano als brein. Hieronder leg ik uit hoe het project is opgebouwd in stappen.
+        </header>
+        <h2>🔧 Stap 1: Motor aansturen met drukknoppen</h2>
+        <p>In de eerste fase hebben we de basis gelegd: het aansturen van de twee DC-motoren met behulp van drukknoppen. Elke knop is verbonden met een digitale ingang van de Arduino.</p>
+
+        <p>  Bij het indrukken van een knop gaat de bijbehorende motor draaien. Hiermee leerden we hoe motoren werken in combinatie met een motor driver (zoals de L298N of L293D) en hoe we ze via software kunnen starten of stoppen.</p>
+          
+        <p>  ✅ Doel van deze stap: Begrijpen hoe je een motor bestuurt met een Arduino, Leren werken met digitale inputs en outputs</p>
+        <img src="./assets/images/WhatsApp Image 2025-05-26 at 07.13.58.jpeg" alt="drukknop" style="width: 300px;height: auto ;">
+          
+        
+
+        <h2> 🖥️ Stap 2: LCD-scherm aansturen met I2C</h2>
+        <p>In de tweede stap voegden we een LCD-scherm (1602 met I2C module) toe. Hiermee kunnen we in realtime laten zien wat de auto aan het doen is.</p>
+        <p>Denk aan teksten zoals: de auto rijdt, de auto staat stil,...</p>
+        <p>Dankzij het I2C-protocol heb je slechts 2 draden nodig (SDA en SCL), wat veel bekabeling scheelt.</p>
+        <p>✅ Doel van deze stap: informatie tonen aan de gebruiker, gebruik maken van I2C-communicatie</p>  
+        <img src="./assets/images/WhatsApp Image 2025-05-26 at 07.13.58 (1).jpeg" alt="lcd" style="width: 300px;height: auto ;">
+        
+        <h2>📍 Stap 3: Zelfstandig zwarte lijn volgen met TCRT5000-sensoren</h2>
+        <p>In de laatste en belangrijkste fase hebben we het wagentje autonoom gemaakt. We gebruiken hiervoor 2 TCRT5000 infraroodsensoren aan de onderkant van de auto, net naast elkaar geplaatst.</p>
+        <p>Deze sensoren detecteren het verschil tussen zwart (de tape) en wit (de vloer): Zwarte tape = lage reflectie ⇒ sensor LOW, Witte vloer = hoge reflectie ⇒ sensor HIGH</p>
+        <p>🔄 Logica: Links = zwart, rechts = wit ⇒ bocht naar links
+
+          Rechts = zwart, links = wit ⇒ bocht naar rechts
+          
+          Beide = zwart ⇒ vooruit
+          
+          Beide = wit ⇒ stop of fout</p>
+        
+        <p>Deze informatie stuurt de Arduino door naar de motor driver om de motoren afzonderlijk aan te sturen en de juiste richting te kiezen.</p>
+        <p>✅ Doel van deze stap: De auto automatisch laten reageren op de omgeving,
+
+          Inzicht in line tracking-algoritmes en
+          
+          Werken met realtime input van sensoren</p>
+          <img src="./assets/images/TCRT5000-Reflective-IR-Sensor-Connections.png" alt="sensor" style="width: 300px;height: auto ;">
+        
       </article>
     </section>
   </main>

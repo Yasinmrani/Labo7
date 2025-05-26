@@ -92,3 +92,34 @@ nav ul li a:hover {
 .tekst {
     font-size: 34px;
 }
+
+.tekst-motorsturing {
+    font-size: 20px;
+}
+
+.button-contact {
+    padding: 12px; 
+    background-color: #3a13d6; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer;
+}
+
+.textarea-contact {
+    padding: 10px; 
+    border-radius: 5px; 
+    border: none;
+}
+
+.form-contact {
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+    max-width: 600px; 
+    margin: auto;
+}
+
+.motorsturing-h2 {
+    text-align: left;
+}
