@@ -35,21 +35,19 @@
     <article class="project-card">
       <section class="projecten-sectie">
         <h1>Neem contact met mij op</h1>
-        <form action="mailto:yasin.mrani2020@hotmail.com" method="post" enctype="text/plain" class="form-contact">
-          
+        <form action="https://formsubmit.co/yasin.mrani2020@hotmail.com" method="POST" class="form-contact">
           <label for="naam">Naam:</label>
-          <input type="text" id="naam" name="naam" class="textarea-contact">
-          
+          <input type="text" id="naam" name="naam" required class="textarea-contact">
+
           <label for="email">E-mailadres:</label>
-          <input type="email" id="email" name="email" class="textarea-contact">
-          
+          <input type="email" id="email" name="email" required class="textarea-contact">
+
           <label for="bericht">Bericht:</label>
-          <textarea id="bericht" name="bericht" rows="5" class="textarea-contact"></textarea>
-          
-          <button type="submit" class="button-contact">
-            Verstuur
-          </button>
+          <textarea id="bericht" name="bericht" rows="5" required class="textarea-contact"></textarea>
+
+          <button type="submit" class="button-contact">Verstuur</button>
         </form>
+
         <section id="map" class="row">
           <div id="HomeMap" class="col-12 mb-3"></div>
         </section>
