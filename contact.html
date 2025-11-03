@@ -6,19 +6,14 @@
   <link rel="stylesheet" href="./css/style.css">
 
   <!-- LEAFLET -->
-  
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-  
   <link rel="stylesheet" href="css/map.css">
-  
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-
 </head>
-<body>
 
-  
+<body>
   <header>
     <nav>
       <ul>
@@ -30,20 +25,23 @@
     </nav>
   </header>
 
-  
   <main>
     <article class="project-card">
       <section class="projecten-sectie">
         <h1>Neem contact met mij op</h1>
-        <form action="https://formsubmit.co/yasin.mrani2020@hotmail.com" method="POST" class="form-contact">
+
+        <!-- Netlify Form -->
+        <form name="contact" method="POST" data-netlify="true" class="form-contact">
+          <input type="hidden" name="form-name" value="contact">
+
           <label for="naam">Naam:</label>
-          <input type="text" id="naam" name="naam" required class="textarea-contact">
+          <input type="text" id="naam" name="naam" class="textarea-contact" required>
 
           <label for="email">E-mailadres:</label>
-          <input type="email" id="email" name="email" required class="textarea-contact">
+          <input type="email" id="email" name="email" class="textarea-contact" required>
 
           <label for="bericht">Bericht:</label>
-          <textarea id="bericht" name="bericht" rows="5" required class="textarea-contact"></textarea>
+          <textarea id="bericht" name="bericht" rows="5" class="textarea-contact" required></textarea>
 
           <button type="submit" class="button-contact">Verstuur</button>
         </form>
@@ -54,7 +52,5 @@
       </section>
     </article>
   </main>
-
 </body>
 </html>
-
