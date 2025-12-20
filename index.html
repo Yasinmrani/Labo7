@@ -4,10 +4,63 @@
   <meta charset="UTF-8">
   <title>Portfolio Yasin Mrani</title>
   <link rel="stylesheet" href="./css/style.css">
+  <style>
+    /* Extra layout specifiek voor homepage foto's */
+    .project-card {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .intro-foto {
+      display: flex;
+      justify-content: center;
+    }
+
+    .intro-foto img {
+      max-width: 100%;
+      border-radius: 500px;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .foto-galerij {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .foto-galerij img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .project-card {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .circle-image {
+    width: 200px;              /* Breedte van de afbeelding */
+    height: 200px;             /* Hoogte van de afbeelding */
+    border-radius: 50%;        /* Maakt de afbeelding rond */
+    object-fit: cover;         /* Zorgt dat de afbeelding mooi vult */
+    border: 4px solid #333;    /* Optionele rand */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Optionele schaduw */
+  }
+  </style>
 </head>
 <body>
 
-  
   <header>
     <nav>
       <ul>
@@ -19,27 +72,34 @@
     </nav>
   </header>
 
-  
   <main>
     <section class="projecten-sectie">
       <header>
         <h2 id="home-title" class="tekst">Welkom!</h2>
       </header>
+
       <article class="project-card">
-        <figure>
-          <img src="./assets/images/WhatsApp Image 2025-02-13 at 16.13.47.jpeg" alt="Foto van Yasin Mrani" style="width: 300px;height: auto ;">
-          <figcaption>&copy;assets</figcaption>
-        </figure>
-       
-        <h3 class="tekst">Over mij</h3>
-        <p>Ik ben Yasin Mrani, een enthousiaste en gedreven professional met een passie voor alles wat met technologie en elektronica te maken heeft. Met mijn leergierigheid en gedrevenheid ben ik altijd op zoek naar nieuwe uitdagingen en groeimogelijkheden.</p>
-        <h3 class="tekst">Hobby </h3>
-        <p>Buiten student op de AP-hogeschool ben ik een voetballer bij Racing Mechelen. Ik doe dit 5keer per week waarvan 1 dag wedstrijd en 4 dagen training.</p>
-        <figure>
-          <img src="./assets/images/WhatsApp Image 2025-05-26 at 04.17.21.jpeg" alt="Foto van Yasin Mrani" style="width: 300px;height: auto ;">
-          <img src="./assets/images/WhatsApp Image 2025-05-26 at 04.18.01.jpeg" alt="Ploegfoto" style="width: 500px;height: 425px ;">
-          <figcaption>&copy;assets</figcaption>
-        </figure>
+        <!-- Profielfoto -->
+        <div class="intro-foto">
+          <img src="./assets/images/WhatsApp Image 2025-02-13 at 16.13.47.jpeg" alt="Foto van Yasin Mrani">
+        </div>
+
+        <!-- Tekstuele content -->
+        <div class="content">
+          
+          <p>Ik ben Yasin Mrani, een IoT-student met een sterke interesse in het ontwerpen en bouwen van slimme, verbonden systemen. Mijn focus ligt op het combineren van hardware, software en data om praktische en betrouwbare oplossingen te creëren voor echte toepassingen.</p>
+          <p>In mijn portfolio presenteer ik een selectie van IoT-projecten waarin ik heb gewerkt met sensoren, microcontrollers, netwerken en dataverwerking. Elk project laat zien hoe ik denk, experimenteer en problemen structureel aanpak van concept tot werkend prototype.</p>
+          <p>Ik ben leergierig, technisch onderlegd en gemotiveerd om mijn kennis verder te verdiepen binnen het IoT-domein. Ik sta open voor samenwerkingen, stages en nieuwe uitdagingen waarin ik mijn vaardigheden kan blijven ontwikkelen.</p>
+          <h4 class="tekst">Hobby</h4>
+          
+
+          
+          <!-- Fotogalerij -->
+          <div class="foto-galerij">
+            <img src="./assets/images/WhatsApp Image 2025-05-26 at 04.17.21.jpeg" alt="Actiefoto voetbal">
+            <img src="./assets/images/WhatsApp Image 2025-05-26 at 04.18.01.jpeg" alt="Ploegfoto Racing Mechelen">
+          </div>
+        </div>
       </article>
     </section>
   </main>
